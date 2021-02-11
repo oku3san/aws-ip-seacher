@@ -44,12 +44,15 @@ module.exports = {
       'error',
       'always',
       {
-        exceptAfterSingleLine: true,
+        exceptAfterSingleLine: true
+      }
+    ],
+    'no-void': [
+      'error',
+      {
+        allowAsStatement: true,
       },
     ],
-    // should be rewritten as `['error', { allowAsStatement: true }]` in ESLint 7 or later
-    // SEE: https://github.com/typescript-eslint/typescript-eslint/issues/1184
-    'no-void': 'off',
     'padding-line-between-statements': [
       'error',
       {
@@ -76,21 +79,13 @@ module.exports = {
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
-      },
-    ],
-    'prefer-arrow/prefer-arrow-functions': [
-      'error',
-      {
-        disallowPrototype: true,
-        singleReturnOnly: false,
-        classPropertiesAllowed: false,
-      },
+      }
     ],
     'react/jsx-filename-extension': [
       'error',
       {
-        extensions: ['.jsx', '.tsx'],
-      },
+        extensions: ['.jsx', '.tsx']
+      }
     ],
     'react/jsx-props-no-spreading': [
       'error',
@@ -100,6 +95,7 @@ module.exports = {
         explicitSpread: 'ignore',
       },
     ],
+    'react/react-in-jsx-scope': 'off',
   },
   overrides: [
     {
